@@ -30,3 +30,5 @@
 *.exe
 *.out
 *.app
+/mgui/.vs
+/mgui/x64/Debug
