@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{8e479a8b-c726-4de2-91f8-d059e789a856}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)IUIElement.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ScreenSpaceConfigs.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)IArea.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)IWindowProvider.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Point.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Rectangle.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Size.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)ScreenSpaceConfigs.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)mathhelper.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Point.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Rectangle.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Size.cpp" />
+  </ItemGroup>
+</Project>
