@@ -3,6 +3,6 @@
 
 namespace mgui {
 	class IWindowProvider {
-
+		
 	};
 }
