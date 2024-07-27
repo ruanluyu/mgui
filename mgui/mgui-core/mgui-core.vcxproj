@@ -155,8 +155,7 @@
     <ClInclude Include="fpm\ios.hpp" />
     <ClInclude Include="fpm\math.hpp" />
     <ClInclude Include="geo.h" />
-    <ClInclude Include="IArea.h" />
-    <ClInclude Include="IUIElement.h" />
+    <ClInclude Include="UIElement.h" />
     <ClInclude Include="IWindowProvider.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="screen.h" />

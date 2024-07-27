@@ -17,26 +17,26 @@ namespace mgui {
 		}
 		
 
-		pixel_loc_type point_to_pixel(const point_loc_type& v, quantization_mode mode)
+		PixelLocT quantize_point_to_pixel(const PointLocT& v, QuantizationMode mode)
 		{
 			switch (mode)
 			{
 			case mgui::screen::Q_FLOOR:
-				return pixel_loc_type(floor(v * _pixels_per_point * subpixels_per_pixel) / subpixels_per_pixel);
+				return PixelLocT(floor(v * _pixels_per_point * subpixels_per_pixel) / subpixels_per_pixel);
 				break;
 			case mgui::screen::Q_ROUND:
-				return pixel_loc_type(round(v * _pixels_per_point * subpixels_per_pixel) / subpixels_per_pixel);
+				return PixelLocT(round(v * _pixels_per_point * subpixels_per_pixel) / subpixels_per_pixel);
 				break;
 			case mgui::screen::Q_CEIL:
-				return pixel_loc_type(ceil(v * _pixels_per_point * subpixels_per_pixel) / subpixels_per_pixel);
+				return PixelLocT(ceil(v * _pixels_per_point * subpixels_per_pixel) / subpixels_per_pixel);
 				break;
 			default:
 				break;
 			}
-			return point_to_pixel(v, Q_ROUND);
+			return quantize_point_to_pixel(v, Q_ROUND);
 		}
 
-		point_loc_type pixel_to_point(const pixel_loc_type& v)
+		PointLocT pixel_to_point(const PixelLocT& v)
 		{
 			return ((double)(v)) / _pixels_per_point;
 		}

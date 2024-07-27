@@ -1,6 +1,7 @@
 #pragma once
 
 #include "geo.h"
+
 using namespace mgui::geo;
 
 namespace mgui {
@@ -13,12 +14,17 @@ namespace mgui {
 		bool ignore;
 	};
 
-	class IUIElement {
+	class UIElement {
+	private:
+		UIElement* parent;
 	public:
-		virtual void RenderAsBackground(const Position2Dpx& query) = 0;
 
+		struct RenderBackgroundArguments {
+			Rectangle2Dpx query_range;
+			void* write_color_buffer;
+		};
 
+		virtual void RenderAsBackground(const RenderBackgroundArguments& arguments) = 0;
 		
-		virtual LayoutPreference2Di ReportLayoutPreference() = 0;
 	};
 }
