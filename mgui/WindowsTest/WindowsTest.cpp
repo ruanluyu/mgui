@@ -2,11 +2,12 @@
 //
 
 #include <iostream>
+#include "../mgui-core/geo.h"
 
-#include "Rectangle.h"
+
 int main()
 {
-    mgui::Rectangle2Df rect;
+    mgui::geo::Position2Dpx rect;
     std::cout << "Hello World!\n";
 }
 

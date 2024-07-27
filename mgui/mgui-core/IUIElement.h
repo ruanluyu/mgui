@@ -1,6 +1,7 @@
 #pragma once
 
-#include "Rectangle.h"
+#include "geo.h"
+using namespace mgui::geo;
 
 namespace mgui {
 
@@ -11,12 +12,10 @@ namespace mgui {
 		float ratio_dx, ratio_dy;
 		bool ignore;
 	};
-	using LayoutPreference2Di = LayoutPreference2D<int>;
-	using LayoutPreference2Df = LayoutPreference2D<float>;
 
 	class IUIElement {
 	public:
-		virtual Rectangle2Di ReportRequiredAreaForRender(const Rectangle2Di& query) = 0;
+		virtual void RenderAsBackground(const Position2Dpx& query) = 0;
 
 
 		

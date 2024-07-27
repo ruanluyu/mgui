@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Point.h"
+#include "basic_geo.h"
 
 namespace mgui {
 	template<class PointT>
