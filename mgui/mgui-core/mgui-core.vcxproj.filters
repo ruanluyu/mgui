@@ -1,60 +1,78 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="external">
+      <UniqueIdentifier>{ebaad641-d28e-4bda-9f6d-479afe9d1489}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-    <Filter Include="fpm">
+    <Filter Include="external\fpm">
       <UniqueIdentifier>{0b026012-25f8-49c5-a518-e665294e1012}</UniqueIdentifier>
     </Filter>
+    <Filter Include="basic">
+      <UniqueIdentifier>{97c8f284-2740-4d60-9ae1-c6fea997d969}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects">
+      <UniqueIdentifier>{037e1c0b-d3f5-4927-ac6a-f730f7ec5729}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="pch.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="UIElement.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="IWindowProvider.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="screen.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="geo.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="fpm\fixed.hpp">
-      <Filter>fpm</Filter>
+      <Filter>external\fpm</Filter>
     </ClInclude>
     <ClInclude Include="fpm\ios.hpp">
-      <Filter>fpm</Filter>
+      <Filter>external\fpm</Filter>
     </ClInclude>
     <ClInclude Include="fpm\math.hpp">
-      <Filter>fpm</Filter>
+      <Filter>external\fpm</Filter>
+    </ClInclude>
+    <ClInclude Include="basic.h">
+      <Filter>basic</Filter>
+    </ClInclude>
+    <ClInclude Include="geo.h">
+      <Filter>basic</Filter>
+    </ClInclude>
+    <ClInclude Include="uuid.h">
+      <Filter>basic</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>basic</Filter>
+    </ClInclude>
+    <ClInclude Include="screen.h">
+      <Filter>basic</Filter>
+    </ClInclude>
+    <ClInclude Include="IWindowProvider.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="UIElement.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="UUIDObject.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="logger.h">
+      <Filter>basic</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="pch.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="geo.cpp">
+      <Filter>basic</Filter>
+    </ClCompile>
+    <ClCompile Include="uuid.cpp">
+      <Filter>basic</Filter>
     </ClCompile>
     <ClCompile Include="mathhelper.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>basic</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>basic</Filter>
     </ClCompile>
     <ClCompile Include="screen.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>basic</Filter>
     </ClCompile>
-    <ClCompile Include="geo.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="UUIDObject.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="logger.cpp">
+      <Filter>basic</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

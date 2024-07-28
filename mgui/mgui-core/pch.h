@@ -9,8 +9,6 @@
 
 #define WIN32_LEAN_AND_MEAN             // Exclude rarely-used stuff from Windows headers
 
-#include "fpm/fixed.hpp"  // For fpm::fixed_16_16
-#include "fpm/math.hpp"   // For fpm::cos
-#include "fpm/ios.hpp"    // For fpm::operator<<
+#include "basic.h"
 
 #endif //PCH_H

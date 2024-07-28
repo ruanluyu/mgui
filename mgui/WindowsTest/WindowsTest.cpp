@@ -2,13 +2,54 @@
 //
 
 #include <iostream>
-#include "../mgui-core/geo.h"
+#include "../mgui-core/UUIDObject.h"
+
+
+
+using namespace mgui;
+
+void log_behaviour(std::string c, LogLevel level)
+{
+    switch (level)
+    {
+    case mgui::LOGLV_INFO:
+        std::cout << "[Info]" << std::endl;
+        break;
+    case mgui::LOGLV_HINT:
+        std::cout << "[Hint]" << std::endl;
+        break;
+    case mgui::LOGLV_WARNING:
+        std::cout << "[Warning]" << std::endl;
+        break;
+    case mgui::LOGLV_ERROR:
+        std::cout << "[Error]" << std::endl;
+        break;
+    default:
+        break;
+    }
+    std::cout << c << std::endl << std::endl;
+}
 
 
 int main()
 {
-    mgui::geo::Position2Dpx rect;
-    std::cout << "Hello World!\n";
+    SetLogger(Logger{ log_behaviour });
+
+    {
+        auto obj1 = UUIDObject::Create<UUIDObject>();
+        auto obj2 = UUIDObject::Create<UUIDObject>();
+
+        obj2->SetParent(obj1);
+
+        obj1->SetName("obj1");
+        obj2->SetName("obj2");
+
+
+        UUIDObject::Finalize(obj1);
+    }
+
+    std::string s;
+    std::cin >> s;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "geo.h"
+#include "UUIDObject.h"
 
 using namespace mgui::geo;
 
@@ -14,9 +14,8 @@ namespace mgui {
 		bool ignore;
 	};
 
-	class UIElement {
+	class UIElement : UUIDObject {
 	private:
-		UIElement* parent;
 	public:
 
 		struct RenderBackgroundArguments {
